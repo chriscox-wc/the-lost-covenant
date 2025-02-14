@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.story {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.puzzle {
+    margin-top: 30px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+}

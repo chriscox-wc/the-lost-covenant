@@ -28,20 +28,23 @@
         <h3>The First Teaching Moment: What is a Cipher?</h3>
         <p>Lincoln pulls out his notepad and starts jotting down the misaligned letters. He’s seen patterns like this before—in cryptography courses and historical cryptanalysis exercises.</p>
         <p>“Ciphers are one of the oldest tools of secrecy,” he thinks, recalling his professor’s words. “Before modern encryption, people relied on simple substitution systems to disguise messages from enemies.”</p>
-        <p>He opens his terminal and runs the letters through a quick decryption script, trying a Caesar cipher—one of the oldest encryption methods in history.</p>
+        <p>He opens his terminal and runs the letters through a quick decryption script, trying a simple Caesar cipher.</p>
 
         <h3>Teaching Moment: The Caesar Cipher</h3>
         <p>The Caesar cipher is a basic encryption method named after Julius Caesar, who used it to send secure messages to his generals. It’s a substitution cipher, meaning each letter in the plaintext is shifted a fixed number of places down the alphabet.</p>
         <p>Example: If you shift the alphabet by three places, ‘A’ becomes ‘D,’ ‘B’ becomes ‘E,’ and so on.</p>
         <p>The encryption is weak by modern standards but was effective in its time—only those who knew the shift number (the key) could decipher the message.</p>
 
-        <p>Lincoln inputs a shift-3 decryption and watches the letters rearrange themselves into a readable phrase:</p>
+        <p>Lincoln types in a simple script to decrypt the passage—but before he can confirm the translation, his screen flickers.</p>
 
-        <p><strong>“SEEK THE COVENANT”</strong></p>
+        <h3>Decrypt This:</h3>
+        <p id="cipher-text">Vjku ku vjg eqpvgpv.</p>  <!-- Shift-2 encrypted version of "This is the content." -->
+        <input type="text" id="user-input" placeholder="Enter decoded message">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="result"></p>
+    </section>
 
-        <p>His stomach tightens. This isn’t just an error—it’s an intentional message.</p>
-
-        <h3>The Second Teaching Moment: Why Cybersecurity Matters in Historical Research</h3>
+    <section class="story">
         <p>Before he can react, a notification pops up on his screen:</p>
 
         <p><strong>“Unauthorized Access Attempt Detected”</strong></p>
@@ -66,14 +69,6 @@
         <p>Someone—or something—just covered its tracks.</p>
 
         <p>And Lincoln isn’t sure if he just stumbled upon an ancient secret or stepped into something far bigger than he realizes.</p>
-    </section>
-
-    <section class="puzzle">
-        <h3>Decrypt This:</h3>
-        <p id="cipher-text">Ymnx nx f qtsl yt ijxnsl.</p>
-        <input type="text" id="user-input" placeholder="Enter decoded message">
-        <button onclick="checkAnswer()">Submit</button>
-        <p id="result"></p>
     </section>
 
     <footer>

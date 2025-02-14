@@ -6,39 +6,43 @@
   <title>Cryptography Forum - The Lost Covenant</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Additional forum-specific styling */
+    /* Forum-specific styles */
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+    }
     .forum-container {
       max-width: 800px;
       margin: 30px auto;
       padding: 20px;
-      background: #fff;
+      background: #1e1e1e;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
     }
     .post {
-      border: 1px solid #ccc;
+      border: 1px solid #333;
       padding: 10px;
       margin-bottom: 10px;
       border-radius: 5px;
-      background-color: #f9f9f9;
+      background-color: #2c2c2c;
     }
     .post .header {
       font-weight: bold;
       margin-bottom: 5px;
+      color: #ff9800;
     }
     .post .timestamp {
       font-size: 0.8em;
-      color: #666;
+      color: #aaa;
       margin-left: 5px;
     }
     .post .content {
       margin-bottom: 10px;
-    }
-    .replies {
-      margin-left: 20px;
-      border-left: 2px solid #ddd;
-      padding-left: 10px;
-      display: none; /* hidden by default */
     }
     .toggle-button {
       cursor: pointer;
@@ -46,6 +50,12 @@
       color: #007BFF;
       text-decoration: underline;
       margin-bottom: 5px;
+    }
+    .replies {
+      margin-left: 20px;
+      border-left: 2px solid #444;
+      padding-left: 10px;
+      display: none; /* Hidden by default */
     }
   </style>
 </head>
@@ -72,7 +82,7 @@
             MysticCipher <span class="timestamp">[2025-02-14 10:45 AM]</span>
           </div>
           <div class="content">
-            That fragment looks really interesting. I think it might be a substitution cipher. Anyone tried running a frequency analysis?
+            That fragment is really intriguing. It definitely looks like a substitution cipher. I'm running a frequency analysis on it now.
           </div>
         </div>
         <!-- Reply 2 -->
@@ -81,19 +91,19 @@
             CodeBreaker101 <span class="timestamp">[2025-02-14 11:00 AM]</span>
           </div>
           <div class="content">
-            I ran some initial checks—it seems like a classic cryptogram. The letter frequencies hint at common letters. Keep us posted!
+            I've noticed similar patterns in Holden’s other work. The common letters might hint at a key. Keep us updated!
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Post 2: Another Post -->
+    <!-- Post 2 -->
     <div class="post">
       <div class="header">
         EnigmaMaster <span class="timestamp">[2025-02-14 11:15 AM]</span>
       </div>
       <div class="content">
-        I'm noticing parallels with other fragments from Holden's research. I believe these clues might eventually lead to the full Covenant.
+        Cross-referencing this fragment with other Holden pieces suggests that there's a hidden message waiting to be decoded. The pattern might even point to a larger conspiracy.
       </div>
       <div class="toggle-button" onclick="toggleReplies(this)">Show Replies</div>
       <div class="replies">
@@ -102,7 +112,107 @@
             CipherSleuth <span class="timestamp">[2025-02-14 11:30 AM]</span>
           </div>
           <div class="content">
-            Exactly! Holden always hinted that the key was hidden in plain sight. The more we decode, the closer we get.
+            Exactly. Holden always hinted that the key was hidden in plain sight. We just need to piece it together.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 3 -->
+    <div class="post">
+      <div class="header">
+        CryptoGuru <span class="timestamp">[2025-02-14 11:45 AM]</span>
+      </div>
+      <div class="content">
+        I'm impressed by the detail in Holden's notes. The frequency distribution here is unusual—could be the cipher isn't as simple as it seems.
+      </div>
+      <div class="toggle-button" onclick="toggleReplies(this)">Show Replies</div>
+      <div class="replies">
+        <div class="post">
+          <div class="header">
+            CodeBreaker101 <span class="timestamp">[2025-02-14 12:00 PM]</span>
+          </div>
+          <div class="content">
+            True, but often a complex-looking cipher hides a simple substitution underneath. Let's not overthink it.
+          </div>
+        </div>
+        <div class="post">
+          <div class="header">
+            MysticCipher <span class="timestamp">[2025-02-14 12:15 PM]</span>
+          </div>
+          <div class="content">
+            Agreed. It might be a red herring too—if something looks out of place, it could be a deliberate distraction.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 4 -->
+    <div class="post">
+      <div class="header">
+        EnigmaMaster <span class="timestamp">[2025-02-14 12:30 PM]</span>
+      </div>
+      <div class="content">
+        I'm noticing one of the posts in another thread seems off. It doesn't match the style of Holden's work at all—almost like someone is trying to throw us off.
+      </div>
+      <div class="toggle-button" onclick="toggleReplies(this)">Show Replies</div>
+      <div class="replies">
+        <div class="post">
+          <div class="header">
+            CryptoGuru <span class="timestamp">[2025-02-14 12:45 PM]</span>
+          </div>
+          <div class="content">
+            A red herring, perhaps? Always be cautious—false leads are common in cryptographic puzzles.
+          </div>
+        </div>
+        <div class="post">
+          <div class="header">
+            CipherSleuth <span class="timestamp">[2025-02-14 1:00 PM]</span>
+          </div>
+          <div class="content">
+            I flagged that post earlier. We should focus on fragments that match Holden's signature style.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 5 -->
+    <div class="post">
+      <div class="header">
+        CodeBreaker101 <span class="timestamp">[2025-02-14 1:15 PM]</span>
+      </div>
+      <div class="content">
+        After running a quick frequency analysis, the most common letter in the fragment likely represents 'E', which fits standard English usage.
+      </div>
+      <div class="toggle-button" onclick="toggleReplies(this)">Show Replies</div>
+      <div class="replies">
+        <div class="post">
+          <div class="header">
+            MysticCipher <span class="timestamp">[2025-02-14 1:30 PM]</span>
+          </div>
+          <div class="content">
+            That makes sense. I'll adjust my decryption model accordingly.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 6 -->
+    <div class="post">
+      <div class="header">
+        EnigmaMaster <span class="timestamp">[2025-02-14 1:45 PM]</span>
+      </div>
+      <div class="content">
+        All these discussions make me more convinced that Holden left us a map of sorts—one that leads to something big. I can’t wait to see how it all connects.
+      </div>
+      <div class="toggle-button" onclick="toggleReplies(this)">Show Replies</div>
+      <div class="replies">
+        <div class="post">
+          <div class="header">
+            CipherSleuth <span class="timestamp">[2025-02-14 2:00 PM]</span>
+          </div>
+          <div class="content">
+            Stay tuned, everyone. More clues will surface as we piece together Holden's research.
           </div>
         </div>
       </div>

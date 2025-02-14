@@ -3,62 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lost Covenant - Chapter 2</title>
+    <title>Chapter 2: The Scholar’s Notes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-        <h1>Chapter 2: The Scholar's Notes</h1>
+        <h1>Chapter 2: The Scholar’s Notes</h1>
         
-        <p>
-            Lincoln Whitrush leaned back in his chair, staring at the dim glow of his laptop screen. The dusty manuscript he had scanned earlier still sat beside him, its brittle pages untouched for decades—perhaps centuries. 
-            The simple Caesar cipher he cracked yesterday had revealed an unusual name: <strong>Matthias Holden</strong>, a 19th-century biblical scholar obsessed with hidden messages in scripture.  
-        </p>
-        
-        <p>
-            Holden’s work had been largely dismissed by his peers, and his final writings had vanished under unknown circumstances. That was, until now.  
-        </p>
+        <p>Lincoln sat in his dimly lit dorm room, the glow of his laptop screen casting long shadows on the walls. His discovery from the ancient manuscript had led him here—to an obscure reference in the notes of a long-forgotten biblical scholar, **Dr. Elias Holden**. </p>
 
-        <p>
-            Lincoln had found them—Holden’s personal notes, buried deep within the university’s digital archives. 
-            The files were a mess of old letters, fragmented thoughts, and seemingly random strings of text. But Lincoln knew better. 
-            Holden hadn’t gone mad. He had been encoding something.  
-        </p>
+        <p>Holden had spent years studying anomalies in ancient texts, believing that certain passages contained **hidden messages** encrypted using classical ciphers. His theories had been dismissed as conspiracy, and after his sudden disappearance, his research faded into obscurity.</p>
 
-        <p>
-            Flipping through the document, Lincoln spotted one passage that repeated variations of the same odd phrase over and over, sometimes with minor alterations. 
-            This wasn’t random—this was <strong>structured</strong>. A pattern.
-        </p>
+        <p>Lincoln’s search had brought him to a **cryptography forum**, where a user claiming to have access to Holden’s old research had posted a fragment of one of his letters. If Holden had encrypted a message, it was up to Lincoln to crack the code.</p>
 
-        <p>Lincoln copied the passage into his notes and prepared to crack the code.</p>
+        <h2>Holden’s Encrypted Letter</h2>
+        <p>Lincoln leaned in closer, his pulse quickening. The message was scrambled—no key, no explanation, just a **jumbled sequence of letters**.</p>
 
-        <h2>The Cryptogram:</h2>
-        <pre id="cipher-text">Xlxc jpnq gmj xyj fqjf xlmjw mlxpx slx xlmjxpwq ysqjq pxqq xmjx xyqj wqzx.</pre>
-
-        <h3>Letter Frequency Analysis:</h3>
-        <p>Use letter frequency analysis to guess the correct letters. Try substituting common letters like 'E', 'T', and 'A' into the most frequent symbols.</p>
-
-        <div class="guess-inputs">
-            <label for="guess-X">X = </label>
-            <input type="text" id="guess-X" class="letter-input">
-            <label for="guess-L">L = </label>
-            <input type="text" id="guess-L" class="letter-input">
-            <label for="guess-C">C = </label>
-            <input type="text" id="guess-C" class="letter-input">
-            <label for="guess-J">J = </label>
-            <input type="text" id="guess-J" class="letter-input">
-            <label for="guess-P">P = </label>
-            <input type="text" id="guess-P" class="letter-input">
+        <div class="cryptogram">
+            <p id="puzzle-text">GYP ZNLXP QZL GYP JQPP</p>
         </div>
 
-        <button id="check-answer">Check Answer</button>
+        <p>It reminded Lincoln of **classic cryptograms**—messages where each letter was substituted with another, forming an encrypted passage. The only way to solve it was through **letter-frequency analysis** and pattern recognition.</p>
 
-        <p id="message"></p>
+        <p><strong>Could Holden’s letter contain the first real clue?</strong></p>
 
-        <h3>Decoded Message:</h3>
-        <pre id="decoded-message"></pre>
+        <h2>Decrypt the Letter</h2>
+        <p>Use the clues in the text to solve the cryptogram. Enter your answer below:</p>
 
-        <script src="script.js"></script>
+        <input type="text" id="userInput" placeholder="Enter your solution">
+        <button onclick="checkSolution()">Submit</button>
+
+        <p id="feedback"></p>
+
+        <a href="chapter3.html" id="next-chapter" style="display:none;">Continue to Chapter 3</a>
     </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

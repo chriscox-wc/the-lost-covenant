@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptography Forum - The Lost Covenant</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional forum-specific styling */
+    .forum-container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .post .header {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .post .timestamp {
+      font-size: 0.8em;
+      color: #666;
+      margin-left: 5px;
+    }
+    .post .content {
+      margin-bottom: 10px;
+    }
+    .replies {
+      margin-left: 20px;
+      border-left: 2px solid #ddd;
+      padding-left: 10px;
+      display: none; /* hidden by default */
+    }
+    .toggle-button {
+      cursor: pointer;
+      font-size: 0.9em;
+      color: #007BFF;
+      text-decoration: underline;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="forum-container">
+    <h1>Cryptography Forum</h1>
+    <p>Welcome to the Cryptography Forum for <em>The Lost Covenant</em>. Discuss clues, theories, and help decode hidden messages.</p>
+
+    <!-- Post 1: Focal Post from CipherSleuth -->
+    <div class="post">
+      <div class="header">
+        CipherSleuth <span class="timestamp">[2025-02-14 10:30 AM]</span>
+      </div>
+      <div class="content">
+        I've got exclusive access to Holden's old research. Check out this fragment I uncovered from his letters:
+        <br>
+        <strong>GFA RJNHG YAQ TVH DAXAN IMHG</strong>
+      </div>
+      <div class="toggle-button" onclick="toggleReplies(this)">Show Replies</div>
+      <div class="replies">
+        <!-- Reply 1 -->
+        <div class="post">
+          <div class="header">
+            MysticCipher <span class="timestamp">[2025-02-14 10:45 AM]</span>
+          </div>
+          <div class="content">
+            That fragment looks really interesting. I think it might be a substitution cipher. Anyone tried running a frequency analysis?
+          </div>
+        </div>
+        <!-- Reply 2 -->
+        <div class="post">
+          <div class="header">
+            CodeBreaker101 <span class="timestamp">[2025-02-14 11:00 AM]</span>
+          </div>
+          <div class="content">
+            I ran some initial checks—it seems like a classic cryptogram. The letter frequencies hint at common letters. Keep us posted!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post 2: Another Post -->
+    <div class="post">
+      <div class="header">
+        EnigmaMaster <span class="timestamp">[2025-02-14 11:15 AM]</span>
+      </div>
+      <div class="content">
+        I'm noticing parallels with other fragments from Holden's research. I believe these clues might eventually lead to the full Covenant.
+      </div>
+      <div class="toggle-button" onclick="toggleReplies(this)">Show Replies</div>
+      <div class="replies">
+        <div class="post">
+          <div class="header">
+            CipherSleuth <span class="timestamp">[2025-02-14 11:30 AM]</span>
+          </div>
+          <div class="content">
+            Exactly! Holden always hinted that the key was hidden in plain sight. The more we decode, the closer we get.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    // Simple function to toggle the display of replies
+    function toggleReplies(element) {
+      var repliesDiv = element.nextElementSibling;
+      if (repliesDiv.style.display === "none" || repliesDiv.style.display === "") {
+        repliesDiv.style.display = "block";
+        element.textContent = "Hide Replies";
+      } else {
+        repliesDiv.style.display = "none";
+        element.textContent = "Show Replies";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -13,14 +13,17 @@ function caesarCipher(str, shift) {
 
 function checkAnswer() {
     let userInput = document.getElementById("user-input").value.trim();
-    let correctAnswer = "This is a test to decode.";  // Decoded text
+    let correctAnswer = "Seek the Covenant";  // Correct decoded message
 
-    if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
+    // Decode the cipher text
+    let decodedMessage = caesarCipher("Ymnx nx f qtsl yt ijxnsl.", 5); // Shift of 5 for Caesar Cipher
+
+    if (userInput.toLowerCase() === decodedMessage.toLowerCase()) {
         document.getElementById("result").innerHTML = "Correct! Proceed to the next chapter.";
         document.getElementById("result").style.color = "green";
         // Redirect to next chapter (if available)
         setTimeout(() => {
-            window.location.href = "chapter2.html";
+            window.location.href = "chapter2.html"; // Ensure you create this file later
         }, 2000);
     } else {
         document.getElementById("result").innerHTML = "Incorrect. Try again.";

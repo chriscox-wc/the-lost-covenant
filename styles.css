@@ -46,15 +46,6 @@ footer {
     font-size: 12px;
 }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 /* Cryptogram styling */
 .cryptogram {
     font-family: 'Courier New', monospace;

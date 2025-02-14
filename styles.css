@@ -50,13 +50,16 @@ footer {
 .cryptogram {
     font-family: 'Courier New', monospace;
     background: #e8e8e8;
-    color: black;
     padding: 15px;
     border-radius: 5px;
     text-align: center;
     font-size: 1.5em;
     letter-spacing: 3px;
     margin: 20px 0;
+}
+
+#puzzle-text {
+    color: black;
 }
 
 /* Input and feedback styling */

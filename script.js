@@ -1,4 +1,4 @@
-// Caesar Cipher Shift (-2 to decode)
+// Caesar Cipher Shift (-3 to decode)
 function caesarCipher(str, shift) {
     return str.split('').map(char => {
         let code = char.charCodeAt(0);
@@ -13,7 +13,7 @@ function caesarCipher(str, shift) {
 
 function checkAnswer() {
     let userInput = document.getElementById("user-input").value.trim();
-    let correctAnswer = caesarCipher("Vjku ku vjg eqpvgpv.", 2);  // Shift of 2 for Caesar Cipher
+    let correctAnswer = caesarCipher("Vhhk wkh Fryhqdqw", 3);  // Shift of 3 for Caesar Cipher
 
     if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
         document.getElementById("result").innerHTML = "Correct! Proceed to the next chapter.";

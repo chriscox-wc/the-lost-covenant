@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Lost Covenant - Chapter 2</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Chapter 2: The Scholar's Notes</h1>
-        <p>Lincoln Whitrush has uncovered a cryptic message hidden in the notes of a forgotten biblical scholar. Can you help him solve the cipher using letter-frequency analysis?</p>
+        
+        <p>
+            Lincoln Whitrush leaned back in his chair, staring at the dim glow of his laptop screen. The dusty manuscript he had scanned earlier still sat beside him, its brittle pages untouched for decades—perhaps centuries. 
+            The simple Caesar cipher he cracked yesterday had revealed an unusual name: <strong>Matthias Holden</strong>, a 19th-century biblical scholar obsessed with hidden messages in scripture.  
+        </p>
+        
+        <p>
+            Holden’s work had been largely dismissed by his peers, and his final writings had vanished under unknown circumstances. That was, until now.  
+        </p>
+
+        <p>
+            Lincoln had found them—Holden’s personal notes, buried deep within the university’s digital archives. 
+            The files were a mess of old letters, fragmented thoughts, and seemingly random strings of text. But Lincoln knew better. 
+            Holden hadn’t gone mad. He had been encoding something.  
+        </p>
+
+        <p>
+            Flipping through the document, Lincoln spotted one passage that repeated variations of the same odd phrase over and over, sometimes with minor alterations. 
+            This wasn’t random—this was <strong>structured</strong>. A pattern.
+        </p>
+
+        <p>Lincoln copied the passage into his notes and prepared to crack the code.</p>
 
         <h2>The Cryptogram:</h2>
         <pre id="cipher-text">Xlxc jpnq gmj xyj fqjf xlmjw mlxpx slx xlmjxpwq ysqjq pxqq xmjx xyqj wqzx.</pre>
 
         <h3>Letter Frequency Analysis:</h3>
-        <p>Guess the letter substitutions by typing the correct letters below. Use frequency analysis to guide your guesses!</p>
-        
+        <p>Use letter frequency analysis to guess the correct letters. Try substituting common letters like 'E', 'T', and 'A' into the most frequent symbols.</p>
+
         <div class="guess-inputs">
             <label for="guess-X">X = </label>
             <input type="text" id="guess-X" class="letter-input">
@@ -33,7 +54,7 @@
         <button id="check-answer">Check Answer</button>
 
         <p id="message"></p>
-        
+
         <h3>Decoded Message:</h3>
         <pre id="decoded-message"></pre>
 

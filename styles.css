@@ -50,6 +50,7 @@ footer {
 .cryptogram {
     font-family: 'Courier New', monospace;
     background: #e8e8e8;
+    color: black;
     padding: 15px;
     border-radius: 5px;
     text-align: center;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Covenant - Chapter 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chapter 2: The Scholar's Notes</h1>
+        <p>Lincoln Whitrush has uncovered a cryptic message hidden in the notes of a forgotten biblical scholar. Can you help him solve the cipher using letter-frequency analysis?</p>
+
+        <h2>The Cryptogram:</h2>
+        <pre id="cipher-text">Xlxc jpnq gmj xyj fqjf xlmjw mlxpx slx xlmjxpwq ysqjq pxqq xmjx xyqj wqzx.</pre>
+
+        <h3>Letter Frequency Analysis:</h3>
+        <p>Guess the letter substitutions by typing the correct letters below. Use frequency analysis to guide your guesses!</p>
+        
+        <div class="guess-inputs">
+            <label for="guess-X">X = </label>
+            <input type="text" id="guess-X" class="letter-input">
+            <label for="guess-L">L = </label>
+            <input type="text" id="guess-L" class="letter-input">
+            <label for="guess-C">C = </label>
+            <input type="text" id="guess-C" class="letter-input">
+            <label for="guess-J">J = </label>
+            <input type="text" id="guess-J" class="letter-input">
+            <label for="guess-P">P = </label>
+            <input type="text" id="guess-P" class="letter-input">
+        </div>
+
+        <button id="check-answer">Check Answer</button>
+
+        <p id="message"></p>
+        
+        <h3>Decoded Message:</h3>
+        <pre id="decoded-message"></pre>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

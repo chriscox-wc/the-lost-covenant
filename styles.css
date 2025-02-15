@@ -103,3 +103,63 @@ button:hover {
 #next-chapter:hover {
     background: #006400;
 }
+
+/* Styling for the puzzle input form */
+.puzzle-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.puzzle-container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.puzzle-instructions {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-group input {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border: 2px solid #007bff;
+}
+
+/* Feedback message styles */
+#puzzleFeedback {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Styles for success and error messages */
+#puzzleFeedback.green {
+    color: green;
+}
+
+#puzzleFeedback.red {
+    color: red;
+}

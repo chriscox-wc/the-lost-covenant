@@ -7,11 +7,34 @@
         <link rel="stylesheet" href="styles.css"> <!-- Link to global stylesheet -->
     <style>
         #cipherWheel {
-            width: 300px;
-            height: 300px;
-            margin: 20px auto;
-            position: relative;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #eee;
+}
+
+.wheel-letter {
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background: white;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.wheel-letter.selected {
+    color: white;
+    background: blue;
+    transform: scale(1.2);
+}
         #wheel {
             width: 100%;
             height: 100%;
@@ -99,17 +122,46 @@
     <p id="hint" style="display: none;">Hint: Align each letter with the key and find its corresponding plaintext letter.</p>
 </div>
 
-<script>
-    let currentRotation = 0;
-    function rotateWheel() {
-        currentRotation += 30;  // Rotates the wheel by 30 degrees each click
-        document.getElementById("wheel").style.transform = `rotate(${currentRotation}deg)`;
+// Define the Vigenère alphabet for the wheel
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const wheel = document.getElementById("cipherWheel");
+const selectedLetterDisplay = document.getElementById("selectedLetter");
+const spinButton = document.getElementById("spinButton");
+
+let currentIndex = 0; // Tracks current letter index
+
+// Function to render the wheel with letters
+function renderWheel() {
+    wheel.innerHTML = ""; // Clear previous letters
+
+    for (let i = 0; i < alphabet.length; i++) {
+        const letterDiv = document.createElement("div");
+        letterDiv.classList.add("wheel-letter");
+        letterDiv.textContent = alphabet[i];
+
+        // Highlight the selected letter
+        if (i === currentIndex) {
+            letterDiv.classList.add("selected");
+        }
+
+        wheel.appendChild(letterDiv);
     }
 
-    function revealHint() {
-        document.getElementById("hint").style.display = "block";
-    }
-</script>
+    // Update displayed letter
+    selectedLetterDisplay.textContent = alphabet[currentIndex];
+}
+
+// Function to spin the wheel
+function spinWheel() {
+    currentIndex = (currentIndex + 1) % alphabet.length; // Move to next letter
+    renderWheel(); // Re-render with updated selection
+}
+
+// Initial render on page load
+renderWheel();
+
+// Event listener for spin button
+spinButton.addEventListener("click", spinWheel);
 
 </body>
 </html>

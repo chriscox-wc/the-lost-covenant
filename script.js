@@ -51,3 +51,36 @@ function checkSolution() {
         document.getElementById("feedback").style.color = "red";
     }
 }
+
+// Function to check the Bible verse cipher puzzle
+function checkBiblePuzzle() {
+    // Expected correct letters (adjust if needed)
+    const correctLetters = ["K", "E", "Y", "S"]; // Example solution: "KEYS"
+    
+    // Get user inputs
+    const userInputs = [
+        document.getElementById("letter1").value.toUpperCase(),
+        document.getElementById("letter2").value.toUpperCase(),
+        document.getElementById("letter3").value.toUpperCase(),
+        document.getElementById("letter4").value.toUpperCase()
+    ];
+
+    // Check if user inputs match the correct letters
+    let isCorrect = true;
+    for (let i = 0; i < correctLetters.length; i++) {
+        if (userInputs[i] !== correctLetters[i]) {
+            isCorrect = false;
+            break;
+        }
+    }
+
+    // Display feedback
+    const feedback = document.getElementById("puzzleFeedback");
+    if (isCorrect) {
+        feedback.innerHTML = "✅ Correct! The message reveals: <b>‘The first key was never lost.’</b>";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Incorrect. Check the verse and letter positions again.";
+        feedback.style.color = "red";
+    }
+}

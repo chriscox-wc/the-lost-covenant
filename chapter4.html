@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: The First Race</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+            padding: 20px;
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        #cipherWheel {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            position: relative;
+        }
+        #wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(#ddd 0deg 180deg, #bbb 180deg 360deg);
+            position: absolute;
+            transition: transform 0.5s ease-out;
+        }
+        #pointer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chapter 4: The First Race</h1>
+
+    <h3>Scene 1: The Journey Begins</h3>
+    <p>Lincoln adjusted his backpack as he stepped off the train, the cold mountain air biting at his skin. The monastery was nestled deep in the Swiss Alps, a centuries-old haven for monks and scholars alike. It had taken him three days to track down this particular location—one of the few places rumored to house a rare manuscript linked to biblical encryption.</p>
+
+    <p>He pulled out his phone, checking the notes he had taken from his research. The cipher in Chapter 3 had pointed him to a specific passage in an ancient text, one that was kept here under careful watch. If he was right, the manuscript could contain a key to deciphering the hidden code embedded in scripture.</p>
+
+    <p>As he climbed the stone steps toward the main entrance, a nagging thought lingered in his mind. Dr. Chroix had seemed overly interested in his discovery. And if Chroix was interested, Lincoln knew he wouldn’t be the only one looking for it.</p>
+
+    <h3>Scene 2: An Unexpected Rival</h3>
+    <p>Inside the monastery’s library, a hush filled the massive stone-walled chamber. Wooden shelves towered over him, packed with ancient texts bound in worn leather. He approached the librarian, a wiry man in his sixties with sharp, knowing eyes.</p>
+
+    <p>“I called ahead,” Lincoln said. “I’m here to review the Codex Antiochus.”</p>
+
+    <p>The librarian studied him for a moment before nodding. “Follow me.”</p>
+
+    <p>They weaved through the maze of shelves until they reached a small study room. A thick manuscript rested on a velvet cloth, its pages yellowed with age. Lincoln’s pulse quickened as he reached for it—</p>
+
+    <p>“Ah. So I was right.”</p>
+
+    <p>Lincoln froze at the voice behind him. Turning, he found himself face-to-face with Nathaniel Dorne, a well-dressed academic Lincoln had encountered before in cryptography circles. Dorne had a reputation—brilliant, relentless, and suspiciously well-funded.</p>
+
+    <p>“Didn’t expect to see you here, Whitrush,” Dorne continued, stepping into the room with a smirk. “But I should have known. You’ve been stirring up quite the conversation online.”</p>
+
+    <p>Lincoln’s jaw tightened. He had no doubt that Dorne was working with—or at least for—Chroix.</p>
+
+    <p>“This manuscript isn’t yours,” Lincoln said.</p>
+
+    <p>Dorne chuckled. “And it’s not yours, either. But the real question is—who’s going to decipher it first?”</p>
+
+    <h3>Scene 3: The Manuscript Puzzle</h3>
+    <p>Ignoring Dorne, Lincoln flipped open the manuscript, scanning the text. He already knew what he was looking for—a particular passage with odd letter spacings. As he ran his fingers over the inked letters, he noticed something.</p>
+
+    <p>The letters formed a pattern, shifting unpredictably. Not a simple shift like a Caesar cipher, but something more complex—a **Vigenère Cipher**.</p>
+
+    <p>Dorne leaned against the doorway, arms crossed. “You look stuck. Need a hint?”</p>
+
+    <p>Lincoln didn’t respond. Instead, he pulled out his notepad and began working through the encryption. The **Vigenère Cipher** required a key—a word or phrase that determined the shifts in the letters. **If he could find the key hidden in the manuscript’s margins, he’d be able to decrypt the next clue.**</p>
+
+    <p>Dorne tapped his watch. “Tick tock, Lincoln. First one to crack the code wins.”</p>
+
+    <p>Lincoln exhaled slowly, his mind racing. This wasn’t just about solving the puzzle anymore—this was a race. And he wasn’t going to lose.</p>
+
+    <h3>The Key: <span id="vigenereKey">COVENANT</span></h3>
+    
+    <p>Use the cipher wheel below to decode the hidden message:</p>
+
+    <div id="cipherWheel">
+        <div id="wheel"></div>
+        <div id="pointer">▼</div>
+    </div>
+
+    <button onclick="rotateWheel()">Spin the Wheel</button>
+    <button onclick="revealHint()">Hint</button>
+
+    <p id="decodedMessage"></p>
+    <p id="hint" style="display: none;">Hint: Align each letter with the key and find its corresponding plaintext letter.</p>
+</div>
+
+<script>
+    let currentRotation = 0;
+    function rotateWheel() {
+        currentRotation += 30;  // Rotates the wheel by 30 degrees each click
+        document.getElementById("wheel").style.transform = `rotate(${currentRotation}deg)`;
+    }
+
+    function revealHint() {
+        document.getElementById("hint").style.display = "block";
+    }
+</script>
+
+</body>
+</html>

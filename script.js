@@ -54,16 +54,18 @@ function checkSolution() {
 
 // Function to check the Bible verse cipher puzzle
 function checkBiblePuzzle() {
-    // Expected correct letters (adjust if needed)
-    const correctLetters = ["K", "E", "Y", "S"]; // Example solution: "KEYS"
+    // Expected correct letters forming "THE ANSWER LIES WITHIN THE CODE"
+    const correctLetters = [
+        "T", "H", "E", "A", "N", "S", "W", "E", "R", 
+        "L", "I", "E", "S", "W", "I", "T", "H", "I", "N", 
+        "T", "H", "E", "C", "O", "D", "E"
+    ];
     
     // Get user inputs
-    const userInputs = [
-        document.getElementById("letter1").value.toUpperCase(),
-        document.getElementById("letter2").value.toUpperCase(),
-        document.getElementById("letter3").value.toUpperCase(),
-        document.getElementById("letter4").value.toUpperCase()
-    ];
+    const userInputs = [];
+    for (let i = 1; i <= correctLetters.length; i++) {
+        userInputs.push(document.getElementById(`letter${i}`).value.toUpperCase());
+    }
 
     // Check if user inputs match the correct letters
     let isCorrect = true;
@@ -77,7 +79,7 @@ function checkBiblePuzzle() {
     // Display feedback
     const feedback = document.getElementById("puzzleFeedback");
     if (isCorrect) {
-        feedback.innerHTML = "✅ Correct! The message reveals: <b>‘The first key was never lost.’</b>";
+        feedback.innerHTML = "✅ Correct! The message reveals: <b>‘The answer lies within the code.’</b>";
         feedback.style.color = "green";
     } else {
         feedback.innerHTML = "❌ Incorrect. Check the verse and letter positions again.";

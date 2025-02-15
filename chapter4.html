@@ -36,30 +36,27 @@
             transform: scale(1.2);
         }
 
-        #wheel {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: conic-gradient(#ddd 0deg 180deg, #bbb 180deg 360deg);
-            position: absolute;
-            transition: transform 0.5s ease-out;
-        }
-
-        #pointer {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            font-weight: bold;
-            color: red;
-        }
-
         button {
             padding: 10px;
             margin: 10px;
             font-size: 16px;
             cursor: pointer;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        #hint {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #successMessage {
+            display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -109,69 +106,41 @@
 
     <p>Lincoln exhaled slowly, his mind racing. This wasn’t just about solving the puzzle anymore—this was a race. And he wasn’t going to lose.</p>
 
-    <h3>The Key: <span id="vigenereKey">COVENANT</span></h3>
-    
-    <p>Use the cipher wheel below to decode the hidden message:</p>
+    <h3>The Ciphertext Message</h3>
+    <p>The ciphertext message was: <strong>Olmvzcbzolmxvtqdcmlozrqykpitiwqrcx</strong></p>
 
-    <!-- Placeholder for Vigenère Square image -->
-    <div>
-        <p><strong>Use this Vigenère Square to help you solve the cipher:</strong></p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vigen%C3%A8re_square_shading.svg/220px-Vigen%C3%A8re_square_shading.svg.png" alt="Vigenère Square" width="500">
+    <p>The key: <strong>veilveilveilveilveilveilveilveilve</strong></p>
+
+    <h3>Decode the Message</h3>
+    <p>Type in the plaintext message below to decode the hidden message:</p>
+
+    <input type="text" id="userInput" placeholder="Enter your decoded message">
+    <button onclick="validateAnswer()">Submit</button>
+
+    <div id="hint">
+        <p>Hint: The key is a repeated phrase, and the message is hidden using the Vigenère Cipher.</p>
     </div>
 
-    <div id="cipherWheel">
-        <div id="wheel"></div>
-        <div id="pointer">▼</div>
+    <div id="successMessage">
+        <p>Congratulations! You've decoded the message correctly. <a href="chapter5.html">Proceed to Chapter 5</a></p>
     </div>
-
-    <button onclick="rotateWheel()">Spin the Wheel</button>
-    <button onclick="revealHint()">Hint</button>
-
-    <p id="decodedMessage"></p>
-    <p id="hint" style="display: none;">Hint: Align each letter with the key and find its corresponding plaintext letter.</p>
 </div>
 
 <script>
-// Define the Vigenère alphabet for the wheel
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-const wheel = document.getElementById("cipherWheel");
-const selectedLetterDisplay = document.getElementById("selectedLetter");
-const spinButton = document.getElementById("spinButton");
+    const correctAnswer = "thekeytothemapishiddeninplainsight"; // The correct plaintext message
+    const userInputField = document.getElementById("userInput");
+    const successMessage = document.getElementById("successMessage");
 
-let currentIndex = 0; // Tracks current letter index
+    // Function to validate the user's input
+    function validateAnswer() {
+        const userAnswer = userInputField.value.trim().toLowerCase();
 
-// Function to render the wheel with letters
-function renderWheel() {
-    wheel.innerHTML = ""; // Clear previous letters
-
-    for (let i = 0; i < alphabet.length; i++) {
-        const letterDiv = document.createElement("div");
-        letterDiv.classList.add("wheel-letter");
-        letterDiv.textContent = alphabet[i];
-
-        // Highlight the selected letter
-        if (i === currentIndex) {
-            letterDiv.classList.add("selected");
+        if (userAnswer === correctAnswer) {
+            successMessage.style.display = "block"; // Show success message
+        } else {
+            alert("Incorrect, try again.");
         }
-
-        wheel.appendChild(letterDiv);
     }
-
-    // Update displayed letter
-    selectedLetterDisplay.textContent = alphabet[currentIndex];
-}
-
-// Function to spin the wheel
-function spinWheel() {
-    currentIndex = (currentIndex + 1) % alphabet.length; // Move to next letter
-    renderWheel(); // Re-render with updated selection
-}
-
-// Initial render on page load
-renderWheel();
-
-// Event listener for spin button
-spinButton.addEventListener("click", spinWheel);
 </script>
 
 </body>

@@ -79,7 +79,8 @@ function checkBiblePuzzle() {
     // Display feedback
     const feedback = document.getElementById("puzzleFeedback");
     if (isCorrect) {
-        feedback.innerHTML = "✅ Correct! The message reveals: <b>‘The answer lies within the code.’</b>";
+        feedback.innerHTML = "✅ Correct! The message reveals: <b>‘The answer lies within the code.’</b>" +
+                             "<br><br><a href='chapter4.html'>➡ Continue to Chapter 4</a>";
         feedback.style.color = "green";
     } else {
         feedback.innerHTML = "❌ Incorrect. Check the verse and letter positions again.";

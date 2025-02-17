@@ -147,6 +147,10 @@ button:hover {
     border: 2px solid #007bff;
 }
 
+#verse-letter {
+    list-style-type: none;
+}
+
 /* Feedback message styles */
 #puzzleFeedback {
     text-align: center;

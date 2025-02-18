@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Covenant - Chapter 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ddd;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #f4a261;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .cipher-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        select {
+            font-size: 16px;
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #f4a261;
+            color: #121212;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #e76f51;
+        }
+        #feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chapter 6: The Encrypted Map</h1>
+
+    <h2>The Hidden Photo</h2>
+    <p>Lincoln’s heart raced as he scrutinized the decrypted message extracted from the steganographic image. The message was clear: <strong>“Seek the vault beneath the fountain.”</strong></p>
+    <p>He glanced around the monastery’s courtyard, ensuring he wasn’t being watched. The ancient stone fountain stood at the center, its weathered carvings whispering secrets of bygone eras. The monks moved about their daily routines, oblivious to the clandestine discovery unfolding in their midst.</p>
+    <p>Approaching the fountain, Lincoln noticed subtle differences between the physical structure and the archived photograph he had decrypted. The base of the fountain, adorned with intricate symbols, seemed to hold the key. Kneeling beside it, he traced his fingers over the carvings, feeling the cold stone under his touch.</p>
+
+    <h2>The Mechanical Cipher Lock</h2>
+    <p>As he examined the base, a concealed panel caught his eye. With a gentle push, it revealed a mechanical cipher lock—a relic from a time when secrets were guarded by ingenuity rather than technology.</p>
+    <p>The lock comprised four rotating rings, each etched with a series of ancient symbols. To access the vault, Lincoln needed to align the rings correctly. The decrypted message had hinted at this mechanism, but the exact combination remained a mystery.</p>
+
+    <h2>Your Task: Decipher the Combination</h2>
+    <p>The symbols on the rings correspond to letters in the ancient Phoenician alphabet. Align the correct sequence to unlock the vault.</p>
+
+    <div class="cipher-container">
+        <label for="ring1">Ring 1:</label>
+        <select id="ring1">
+            <option value="𐤀">𐤀</option>
+            <option value="𐤁">𐤁</option>
+            <option value="𐤂">𐤂</option>
+            <option value="𐤃">𐤃</option>
+            <option value="𐤄">𐤄</option>
+        </select>
+
+        <label for="ring2">Ring 2:</label>
+        <select id="ring2">
+            <option value="𐤊">𐤊</option>
+            <option value="𐤋">𐤋</option>
+            <option value="𐤌">𐤌</option>
+            <option value="𐤍">𐤍</option>
+            <option value="𐤎">𐤎</option>
+        </select>
+
+        <label for="ring3">Ring 3:</label>
+        <select id="ring3">
+            <option value="𐤔">𐤔</option>
+            <option value="𐤕">𐤕</option>
+            <option value="𐤖">𐤖</option>
+            <option value="𐤗">𐤗</option>
+            <option value="𐤘">𐤘</option>
+        </select>
+
+        <label for="ring4">Ring 4:</label>
+        <select id="ring4">
+            <option value="𐤞">𐤞</option>
+            <option value="𐤟">𐤟</option>
+            <option value="𐤠">𐤠</option>
+            <option value="𐤡">𐤡</option>
+            <option value="𐤢">𐤢</option>
+        </select>
+
+        <br>
+        <button onclick="checkCombination()">Unlock</button>
+        <p id="feedback"></p>
+    </div>
+
+    <h2>The Vault Unlocks</h2>
+    <p id="nextPart" style="display: none;">
+        As Lincoln aligns the rings to the correct symbols, the ancient mechanism groans to life. The stone door shifts, revealing a dark passageway leading into the depths of the monastery.
+    </p>
+</div>
+
+<script>
+    function checkCombination() {
+        const ring1 = document.getElementById('ring1').value;
+        const ring2 = document.getElementById('ring2').value;
+        const ring3 = document.getElementById('ring3').value;
+        const ring4 = document.getElementById('ring4').value;
+
+        const correctCombination = ['𐤁', '𐤋', '𐤔', '𐤞']; 
+
+        if (ring1 === correctCombination[0] && ring2 === correctCombination[1] && ring3 === correctCombination[2] && ring4 === correctCombination[3]) {
+            document.getElementById('feedback').innerText = 'The vault unlocks with a satisfying click.';
+            document.getElementById('nextPart').style.display = 'block';
+        } else {
+            document.getElementById('feedback').innerText = 'The combination is incorrect. Try again.';
+        }
+    }
+</script>
+
+</body>
+</html>

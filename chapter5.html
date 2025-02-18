@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Shadows of the Past</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to global stylesheet -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        #puzzle-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #hidden-image {
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 60%;
+            max-width: 400px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none; /* Initially hidden */
+        }
+        #message {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Chapter 5: Shadows of the Past</h1>
+
+<h3>A Hidden Clue</h3>
+<p>Lincoln ran his fingers across the ancient stone walls of the monastery courtyard. His last clue had led him here, but the connection to the **hidden chamber** still eluded him.</p>
+
+<p>Then he noticed something odd—a **stone fountain at the courtyard’s center**. It was unremarkable at first glance, but something about it seemed... deliberate. He circled it, eyes scanning for details.</p>
+
+<p>Then he saw it—a **worn engraving beneath the water’s edge**, only visible when the light struck it at a certain angle.</p>
+
+<h3>The Hidden Message</h3>
+<p>Lincoln pulled out his phone and took a photo of the inscription. It was obscured by **water stains and weathering**, but he knew this was **steganography**—a method of hiding messages in seemingly ordinary images.</p>
+
+<p>Decrypt the hidden message in the image below:</p>
+
+<!-- Placeholder for the steganographic image -->
+<div id="puzzle-container">
+    <img id="hidden-image" src="placeholder-image.jpg" alt="Image with hidden message">
+    
+    <p>Enter the decrypted message:</p>
+    <input type="text" id="userInput" placeholder="Type your answer here">
+    <button id="checkAnswer" onclick="validateAnswer()">Submit</button>
+    
+    <p id="message"></p>
+    
+    <!-- Hidden button to proceed to Chapter 6 -->
+    <button id="nextChapter" onclick="goToNextChapter()">Continue to Chapter 6</button>
+</div>
+
+<script>
+    document.getElementById("userInput").addEventListener("input", function() {
+        document.getElementById("checkAnswer").style.display = this.value.trim() ? "block" : "none";
+    });
+
+    function validateAnswer() {
+        const userAnswer = document.getElementById("userInput").value.trim().toLowerCase();
+        const correctAnswer = "follow the fountain’s shadow at dawn"; // Expected plaintext message
+
+        if (userAnswer === correctAnswer) {
+            document.getElementById("message").textContent = "Correct! You have deciphered the hidden clue.";
+            document.getElementById("message").style.color = "green";
+            document.getElementById("nextChapter").style.display = "block";
+        } else {
+            document.getElementById("message").textContent = "Incorrect. Try again.";
+            document.getElementById("message").style.color = "red";
+        }
+    }
+
+    function goToNextChapter() {
+        window.location.href = "chapter6.html"; // Change this to the actual Chapter 6 file
+    }
+</script>
+
+</body>
+</html>

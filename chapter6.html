@@ -69,8 +69,8 @@
     <p>The symbols on the rings correspond to letters in the ancient Phoenician alphabet. Align the correct sequence to unlock the vault.</p>
 
     <div class="cipher-container">
-        <label for="ring1">Ring 1:</label>
-        <select id="ring1">
+        <label for="ring4">Ring 4:</label>
+        <select id="ring4">
             <option value="𐤀">𐤀</option>
             <option value="𐤁">𐤁</option>
             <option value="𐤂">𐤂</option>
@@ -78,8 +78,8 @@
             <option value="𐤄">𐤄</option>
         </select>
 
-        <label for="ring2">Ring 2:</label>
-        <select id="ring2">
+        <label for="ring3">Ring 3:</label>
+        <select id="ring3">
             <option value="𐤊">𐤊</option>
             <option value="𐤋">𐤋</option>
             <option value="𐤌">𐤌</option>
@@ -87,8 +87,8 @@
             <option value="𐤎">𐤎</option>
         </select>
 
-        <label for="ring3">Ring 3:</label>
-        <select id="ring3">
+        <label for="ring2">Ring 2:</label>
+        <select id="ring2">
             <option value="𐤔">𐤔</option>
             <option value="𐤕">𐤕</option>
             <option value="𐤖">𐤖</option>
@@ -96,8 +96,8 @@
             <option value="𐤘">𐤘</option>
         </select>
 
-        <label for="ring4">Ring 4:</label>
-        <select id="ring4">
+        <label for="ring1">Ring 1:</label>
+        <select id="ring1">
             <option value="𐤕">𐤕</option>
             <option value="𐤟">𐤟</option>
             <option value="𐤠">𐤠</option>
@@ -123,7 +123,7 @@
         const ring3 = document.getElementById('ring3').value;
         const ring4 = document.getElementById('ring4').value;
 
-        const correctCombination = = ['𐤁', '𐤋', '𐤔', '𐤕']; 
+        const correctCombination = ['𐤁', '𐤋', '𐤔', '𐤕']; 
 
         if (ring1 === correctCombination[0] && ring2 === correctCombination[1] && ring3 === correctCombination[2] && ring4 === correctCombination[3]) {
             document.getElementById('feedback').innerText = 'The vault unlocks with a satisfying click.';

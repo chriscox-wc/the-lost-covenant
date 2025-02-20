@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 6: The Encrypted Map</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
     <style>
-        h1, h2 {
-            text-align: center;
-        }
-        p {
-            line-height: 1.6;
-        }
         .cipher-container {
             text-align: center;
             margin-top: 20px;
@@ -20,16 +14,6 @@
             font-size: 16px;
             padding: 5px;
             margin: 5px;
-        }
-        button {
-            font-size: 16px;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #e76f51;
         }
         #feedback {
             margin-top: 10px;
@@ -40,8 +24,9 @@
 </head>
 <body>
 
-<div>
     <h1>Chapter 6: The Encrypted Map</h1>
+
+<section class="story">
 
     <h2>The Hidden Photo</h2>
     <p>Lincoln’s heart raced as he scrutinized the decrypted message extracted from the steganographic image. The message was clear: <strong>“follow the fountain’s shadow at dawn.”</strong></p>
@@ -104,12 +89,11 @@
         <option value="𐤄">𐤄</option>
         <option value="𐤁">𐤁</option> <!-- B -->
     </select>
-</div>
-
         <br>
         <button onclick="checkCombination()">Unlock</button>
+        </section>
+        <footer>
         <p id="feedback"></p>
-    </div>
 
     <p id="nextPart" style="display: none;">
         As Lincoln aligns the rings to the correct symbols, the ancient mechanism groans to life. The stone door shifts, revealing a dark passageway leading into the depths of the monastery.
@@ -117,8 +101,7 @@
     
         <!-- Hidden button to proceed to Chapter 7 -->
     <button style="display: none;" id="nextChapter" onclick="goToNextChapter()">Continue to Chapter 7</button>
-</div>
-
+</footer>
 <script>
     function checkCombination() {
         const ring1 = document.getElementById('ring1').value;

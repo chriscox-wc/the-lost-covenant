@@ -21,6 +21,7 @@ body::before {
     background: url('cyber-grid.png') repeat; /* Placeholder for a future grid effect */
     opacity: 0.1;
     z-index: -1;
+}
 
 /* Header with space for a future logo */
 header {

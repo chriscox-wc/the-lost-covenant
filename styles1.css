@@ -44,6 +44,7 @@ header img {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     backdrop-filter: blur(10px);
+    max-width: 100%;
 }
 
 /* Puzzle Box */

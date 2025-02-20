@@ -114,6 +114,9 @@
     <p id="nextPart" style="display: none;">
         As Lincoln aligns the rings to the correct symbols, the ancient mechanism groans to life. The stone door shifts, revealing a dark passageway leading into the depths of the monastery.
     </p>
+    
+        <!-- Hidden button to proceed to Chapter 7 -->
+    <button id="nextChapter" onclick="goToNextChapter()">Continue to Chapter 7</button>
 </div>
 
 <script>
@@ -128,6 +131,7 @@
         if (ring1 === correctCombination[0] && ring2 === correctCombination[1] && ring3 === correctCombination[2] && ring4 === correctCombination[3]) {
             document.getElementById('feedback').innerText = 'The vault unlocks with a satisfying click.';
             document.getElementById('nextPart').style.display = 'block';
+            document.getElementById('nextChapter').style.display = 'block';
         } else {
             document.getElementById('feedback').innerText = 'The combination is incorrect. Try again.';
         }

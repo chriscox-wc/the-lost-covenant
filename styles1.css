@@ -72,6 +72,21 @@ input:focus {
     box-shadow: 0 0 10px rgba(0, 140, 186, 0.6);
 }
 
+a {
+    color: #00FFFF;  /* Base link color (neon cyan) */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: #00B8B8;  /* Slightly darker cyan for visited links */
+}
+
+a:hover {
+    color: #00FFB3;  /* Brighter cyan for hover */
+    text-decoration: underline;
+}
+
 /* Cyber-style buttons */
 button {
     padding: 12px 24px;

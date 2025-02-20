@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 5: Shadows of the Past</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to global stylesheet -->
+    <link rel="stylesheet" href="styles1.css"> <!-- Link to global stylesheet -->
     <style>
         #puzzle-container {
             text-align: center;
@@ -24,13 +24,13 @@
         }
         button {
             font-size: 1.2em;
-    text-decoration: none;
-    background: #008000;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
+            text-decoration: none;
+            background: #008000;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
             display: none; /* Initially hidden */
         }
         #message {
@@ -41,8 +41,9 @@
 </head>
 <body>
 
-
 <h1>Chapter 5: The Map’s Secret</h1>
+
+<section class="story">
 
 <h2>A Narrow Escape</h2>
 <p>Lincoln barely had time to process the decoded message before Dorne’s smug expression darkened. The moment Lincoln scribbled down the translation, Dorne knew he was beaten.</p>
@@ -59,6 +60,10 @@
 
 <p>Bursting through an arched doorway, Lincoln ducked into a side passage, pressing himself against the cold stone wall. Dorne’s steps thundered past. Lincoln exhaled, gripping his notebook. The map was hidden in plain sight. But where?</p>
 
+</section>
+
+<section class="story">
+
 <h2>Following the Clue</h2>
 <p>Stepping cautiously into the monastery’s courtyard, Lincoln flipped back through his notes. The decoded message repeated in his mind:</p>
 
@@ -69,6 +74,10 @@
 <p>In the center of the courtyard stood a massive stone fountain. Its design was simple—too simple. But the base of the fountain bore intricate carvings, winding symbols that Lincoln hadn’t noticed before.</p>
 
 <p>Then he saw it—a **worn engraving beneath the water’s edge**, only visible when the light struck it at a certain angle.</p>
+
+</section>
+
+<section class="story">
 
 <h3>The Hidden Message</h3>
   <p>Lincoln pulled out his phone and began searching the monastery’s digital archives. If the monks had hidden a message, they wouldn’t have left it in plain sight for anyone to see. They would have buried it deeper.</p>
@@ -90,12 +99,15 @@
     <p>Enter the decrypted message:</p>
     <input type="text" id="userInput" placeholder="Type your answer here">
     <button id="checkAnswer" onclick="validateAnswer()">Submit</button>
-    
+    </section>
+    <footer>
     <p id="message"></p>
     
     <!-- Hidden button to proceed to Chapter 6 -->
     <button id="nextChapter" onclick="goToNextChapter()">Continue to Chapter 6</button>
+    </footer>
 </div>
+
 
 <script>
     document.getElementById("userInput").addEventListener("input", function() {

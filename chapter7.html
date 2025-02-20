@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: The Order of the Veil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section>
+        <h2>Chapter 7: The Order of the Veil</h2>
+
+        <h3>The Descent</h3>
+        <p>
+            The heavy stone door groaned open, revealing a narrow staircase descending into darkness. Lincoln hesitated. 
+            He glanced back at the monastery courtyard—still quiet, still undisturbed. The monks moved about their routines, 
+            unaware of the secret that had been buried beneath their feet for centuries.
+        </p>
+        <p>
+            With a deep breath, he stepped forward. The air grew colder as he moved deeper underground. His phone’s flashlight 
+            cut through the darkness, illuminating walls lined with ancient inscriptions. Some were in Latin, others in the 
+            Phoenician script he had been decoding.
+        </p>
+        <p>
+            At the bottom of the stairs, he reached a chamber—small, circular, and eerily silent. In the center stood a stone 
+            pedestal, atop which rested a weathered leather-bound tome. The cover bore a symbol he recognized immediately: 
+            the same emblem that had appeared in his research on medieval cryptography.
+        </p>
+        <p>
+            As he reached for the book, a voice echoed from the shadows.
+        </p>
+        <p><strong>“You shouldn’t be here.”</strong></p>
+
+        <p>
+            Lincoln spun around. A hooded figure stepped forward, torchlight casting flickering shadows across the chamber walls. 
+            Behind him, two more figures emerged, their faces obscured.
+        </p>
+
+        <h3>The Order Revealed</h3>
+        <p>
+            “The Order of the Veil has safeguarded these secrets for centuries,” the hooded figure continued, his voice calm but firm. 
+            “What you seek is not meant for outsiders.”
+        </p>
+        <p>
+            Lincoln’s mind raced. He had heard whispers of the Order before—an elusive group of scholars and protectors, sworn to keep 
+            certain knowledge hidden from the world. But were they historians? Guardians? Or something else entirely?
+        </p>
+        <p>
+            “Then why leave the clues?” Lincoln countered. “If this knowledge was meant to stay buried, why create a trail leading right to it?”
+        </p>
+        <p>
+            The figure hesitated.
+        </p>
+        <p><strong>“Because some secrets must be earned. And some must be tested.”</strong></p>
+
+        <p>
+            From beneath his cloak, he produced a metal object—a cipher disk, identical to those used by Renaissance cryptographers. 
+            He placed it on the pedestal beside the book.
+        </p>
+        <p><strong>“Prove you are worthy of the truth.”</strong></p>
+
+        <h3>Unlock the Ancient Vault</h3>
+        <p>Each verse contains a hidden number. Extract the correct values and enter the four-digit key to unlock the manuscript.</p>
+
+        <label for="genesis">Genesis 7:2:</label>
+        <input type="number" id="genesis" min="0" max="99">
+
+        <label for="exodus">Exodus 20:15:</label>
+        <input type="number" id="exodus" min="0" max="99">
+
+        <label for="psalm">Psalm 119:9:</label>
+        <input type="number" id="psalm" min="0" max="99">
+
+        <label for="proverbs">Proverbs 3:5:</label>
+        <input type="number" id="proverbs" min="0" max="99">
+
+        <button onclick="checkCode()">Submit</button>
+
+        <p id="feedback"></p>
+    </section>
+
+    <script>
+        function checkCode() {
+            // Retrieve input values
+            const num1 = parseInt(document.getElementById('genesis').value);
+            const num2 = parseInt(document.getElementById('exodus').value);
+            const num3 = parseInt(document.getElementById('psalm').value);
+            const num4 = parseInt(document.getElementById('proverbs').value);
+
+            // Correct combination
+            const correctCode = [7, 8, 9, 3]; // Based on biblical references
+
+            if (num1 === correctCode[0] && num2 === correctCode[1] && num3 === correctCode[2] && num4 === correctCode[3]) {
+                document.getElementById('feedback').innerText = 'The vault unlocks with a deep, resonant click. The manuscript awaits...';
+            } else {
+                document.getElementById('feedback').innerText = 'The combination is incorrect. Try again.';
+            }
+        }
+    </script>
+
+</body>
+</html>

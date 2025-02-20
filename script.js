@@ -87,3 +87,18 @@ function checkBiblePuzzle() {
         feedback.style.color = "red";
     }
 }
+
+const correctAnswer = "thekeytothemapishiddeninplainsight"; // The correct plaintext message
+    const userInputField = document.getElementById("userInput");
+    const successMessage = document.getElementById("successMessage");
+
+    // Function to validate the user's input
+    function validateAnswer() {
+        const userAnswer = userInputField.value.trim().toLowerCase();
+
+        if (userAnswer === correctAnswer) {
+            successMessage.style.display = "block"; // Show success message
+        } else {
+            alert("Incorrect, try again.");
+        }
+    }

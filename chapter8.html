@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: The Betrayal</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+        <h1>Chapter 8: The Betrayal</h1>
+        
+        <section id="story">
+            <p>The vault door groaned open, releasing a gust of stale, dust-laden air...</p>
+            <p>Lincoln stepped inside, his heart pounding. His flashlight revealed rows of aged wooden shelves...</p>
+            <p>At the far end of the chamber, resting on an ornate marble pedestal, lay the object he had risked everything to find.</p>
+            <p><strong>The manuscript.</strong></p>
+            <p>Bound in cracked leather and embossed with intricate gold filigree...</p>
+            
+            <p><strong>A Familiar Voice</strong></p>
+            <p>A slow clap echoed through the chamber. “I have to say, I’m impressed, Lincoln.”</p>
+            <p>The voice sent a jolt of cold through his veins. Dr. Prescott Chroix.</p>
+            
+            <p>From the shadows near the vault entrance, his former mentor stepped forward...</p>
+            <p>“You never really trusted me, did you?” Lincoln asked.</p>
+            <p>Chroix smirked. “On the contrary, I trusted you to be exactly who you are—relentless, brilliant… and far too naive.”</p>
+            
+            <p><strong>The Puzzle Within the Manuscript</strong></p>
+            <p>Lincoln took a step back. “This isn’t just about the text, is it?”</p>
+            <p>Chroix’s smirk widened. “Of course not. That manuscript holds more than just ancient writings—it contains a cryptographic fingerprint. The original checksum.”</p>
+            
+            <p>Lincoln’s phone buzzed again. A single message: <strong>“Trust no one.”</strong></p>
+            
+            <p><strong>The Escape</strong></p>
+            <p>Lincoln made his decision. He spun, shoving the manuscript into his backpack and bolting toward the shelves...</p>
+            <p>Thinking fast, Lincoln yanked a towering shelf backward. It crashed to the ground...</p>
+            <p>He had to get out. He had to decrypt the manuscript before Chroix did.</p>
+        </section>
+        
+        <section id="puzzle">
+            <h2>Puzzle: Checksum Verification</h2>
+            <p>Lincoln needs to verify which manuscripts are authentic and which have been tampered with. Enter the correct hash value to proceed.</p>
+            <input type="text" id="checksum-input" placeholder="Enter checksum">
+            <button onclick="checkChecksum()">Verify</button>
+            <p id="result"></p>
+        </section>
+        
+        <button id="next-chapter">Next Chapter</button>
+    </div>
+
+    <script>
+        function checkChecksum() {
+            const correctHash = "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3"; // Example SHA-1 hash
+            const userInput = document.getElementById("checksum-input").value.trim();
+            const resultElement = document.getElementById("result");
+            
+            if (userInput === correctHash) {
+                resultElement.textContent = "Correct! The manuscript is authentic.";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "Incorrect checksum. The manuscript may be forged!";
+                resultElement.style.color = "red";
+            }
+        }
+        
+        document.getElementById("next-chapter").addEventListener("click", function() {
+            window.location.href = "chapter9.html";
+        });
+    </script>
+</body>
+</html>

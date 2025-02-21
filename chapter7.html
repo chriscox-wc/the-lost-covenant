@@ -98,6 +98,7 @@
 
             if (num1 === correctCode[0] && num2 === correctCode[1] && num3 === correctCode[2] && num4 === correctCode[3]) {
                 document.getElementById('feedback').innerText = 'The vault unlocks with a deep, resonant click. The manuscript awaits...';
+                document.getElementById("next-chapter").style.display = "block";
             } else {
                 document.getElementById('feedback').innerText = 'The combination is incorrect. Try again.';
             }

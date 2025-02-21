@@ -56,29 +56,50 @@
     <p><strong>Hash Output:</strong> <span id="hashOutput">[Awaiting input]</span></p>    
 </section>
         
-        <section class="puzzle">
-            <h2>Puzzle: Checksum Verification</h2>
-            <p>Lincoln needs to verify which manuscripts are authentic and which have been tampered with. Enter the correct hash value to proceed.</p>
-            <input type="text" id="checksum-input" placeholder="Enter checksum">
-            <button onclick="checkChecksum()">Verify</button>
-            <p id="result"></p>
-        </section>
+        <section id="puzzle">
+    <h2>Checksum Puzzle: Find the Authentic Manuscript</h2>
+    <p>Lincoln has three manuscript fragments. Only one is real. The Order provided a checksum for verification:</p>
+    
+    <p><strong>Reference Checksum:</strong> <span id="referenceChecksum">f3b2a1c4d567e890...</span></p>
+
+    <h3>Manuscript Fragments</h3>
+
+    <p>Hash each fragment below and compare it to the reference checksum. Only one is a perfect match.</p>
+
+    <label for="fragmentSelect">Choose a Manuscript Fragment:</label>
+    <select id="fragmentSelect">
+        <option value="Fragment A">Fragment A: "In the beginning was the Word, and the Word was encrypted..."</option>
+        <option value="Fragment B">Fragment B: "The light shines in darkness, but the message is obfuscated..."</option>
+        <option value="Fragment C">Fragment C: "And the Word became hash, and dwelt among us..."</option>
+    </select>
+
+    <button onclick="checkChecksum()">Verify</button>
+
+    <p><strong>Computed Hash:</strong> <span id="computedHash">[Awaiting input]</span></p>
+    <p id="verificationResult"></p>
+    
+</section>
         
         <button id="next-chapter">Next Chapter</button>
-    </div>
+    
 
     <script>
-        function checkChecksum() {
-            const correctHash = "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3"; // Example SHA-1 hash
-            const userInput = document.getElementById("checksum-input").value.trim();
-            const resultElement = document.getElementById("result");
-            
-            if (userInput === correctHash) {
-                resultElement.textContent = "Correct! The manuscript is authentic.";
-                resultElement.style.color = "green";
+        const correctChecksum = "f3b2a1c4d567e890abcdef1234567890abcdef12"; 
+
+        async function checkChecksum() {
+            const selectedText = document.getElementById('fragmentSelect').value.split(": ")[1];
+            const encoder = new TextEncoder();
+            const data = encoder.encode(selectedText);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+            document.getElementById('computedHash').textContent = hashHex;
+
+            if (hashHex === correctChecksum) {
+                document.getElementById('verificationResult').innerHTML = "<span style='color:green;'>Correct! This is the authentic manuscript.</span>";
             } else {
-                resultElement.textContent = "Incorrect checksum. The manuscript may be forged!";
-                resultElement.style.color = "red";
+                document.getElementById('verificationResult').innerHTML = "<span style='color:red;'>Incorrect. This fragment has been altered.</span>";
             }
         }
         
